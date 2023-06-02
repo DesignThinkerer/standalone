@@ -1,60 +1,41 @@
-
-
 <div class="content" role="main">
-  <span>{{ title }} app is running!</span>
+	<header>
+		<!-- ARIA breadcrumb pattern 
+			https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/
+		-->
+		<nav aria-label="Breadcrumb" class="breadcrumb">
+			<ol>
+				<li>
+					<a href="../../../.."> WAI-ARIA Authoring Practices Guide (APG) </a>
+				</li>
+				<li>
+					<a href="../../../"> Patterns </a>
+				</li>
+				<li>
+					<a href="../../"> Breadcrumb Pattern </a>
+				</li>
+				<li>
+					<a href="" aria-current="page"> Breadcrumb Example </a>
+				</li>
+			</ol>
+		</nav>
+		<h1>{{ title }}</h1>
+	</header>
 
+	<nav role="main-nav">
+		<li>Accueil</li>
+		<li>Profil</li>
+		<li>Carnet</li>
+		<li>Courses</li>
+		<li>Planificateur</li>
+		<li>Réserves</li>
+		<li>Astuces</li>
+		<li>Utilitaires</li>
+		<li>Trophées</li>
+		<li>Paramètres</li>
+		<li>Partenaires</li>
+		<li>A propos</li>
+	</nav>
 
-  selection = {{ selection.value }}
-
-  <div *ngIf="selection.value == 'component' || !selection.value">
-    l'option par défaut est sélectionnée
-  </div>
-
-  <input type="hidden" #selection>
-  
-  <!-- 
-      #selection is a template reference variable, it reference the input element itself.
-      The value of the input is bound to the variable selection.
-      The value of the variable selection is bound to the ngSwitch directive.
-      The ngSwitch directive toggles the display of the terminal based on the value of the variable selection.
-  -->
-
-  <div>
-    <button (click)="selection.value = 'component'" tabindex="0"> 
-      <span>New Component</span>
-    </button>
-
-    <button (click)="selection.value = 'material'" tabindex="0">
-      <span>Angular Material</span>
-    </button>
-
-    <button (click)="selection.value = 'pwa'" tabindex="0">
-      <span>Add PWA Support</span>
-    </button>
-
-    <button (click)="selection.value = 'dependency'" tabindex="0">
-      <span>Add Dependency</span>
-    </button>
-
-    <button (click)="selection.value = 'test'" tabindex="0">
-      <span>Run and Watch Tests</span>
-    </button>
-
-    <button (click)="selection.value = 'build'" tabindex="0">
-      <span>Build for Production</span>
-    </button>
-  </div>
-
-  <!-- Terminal -->
-  <div class="terminal" [ngSwitch]="selection.value">
-      <pre *ngSwitchDefault>ng generate component xyz</pre>
-      <pre *ngSwitchCase="'material'">ng add @angular/material</pre>
-      <pre *ngSwitchCase="'pwa'">ng add @angular/pwa</pre>
-      <pre *ngSwitchCase="'dependency'">ng add _____</pre>
-      <pre *ngSwitchCase="'test'">ng test</pre>
-      <pre *ngSwitchCase="'build'">ng build</pre>
-  </div>
-
+	<router-outlet></router-outlet>
 </div>
-
-<router-outlet></router-outlet>
