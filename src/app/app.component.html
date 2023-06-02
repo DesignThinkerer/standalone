@@ -1,6 +1,45 @@
-{{ title }} app is running!
 
- <div class="terminal" [ngSwitch]="selection.value">
+
+<div class="content" role="main">
+  <span>{{ title }} app is running!</span>
+
+  <input type="hidden" #selection>
+  
+  <!-- 
+      #selection is a template reference variable, it reference the input element itself.
+      The value of the input is bound to the variable selection.
+      The value of the variable selection is bound to the ngSwitch directive.
+      The ngSwitch directive toggles the display of the terminal based on the value of the variable selection.
+  -->
+
+  <div>
+    <button (click)="selection.value = 'component'" tabindex="0"> 
+      <span>New Component</span>
+    </button>
+
+    <button (click)="selection.value = 'material'" tabindex="0">
+      <span>Angular Material</span>
+    </button>
+
+    <button (click)="selection.value = 'pwa'" tabindex="0">
+      <span>Add PWA Support</span>
+    </button>
+
+    <button (click)="selection.value = 'dependency'" tabindex="0">
+      <span>Add Dependency</span>
+    </button>
+
+    <button (click)="selection.value = 'test'" tabindex="0">
+      <span>Run and Watch Tests</span>
+    </button>
+
+    <button (click)="selection.value = 'build'" tabindex="0">
+      <span>Build for Production</span>
+    </button>
+  </div>
+
+  <!-- Terminal -->
+  <div class="terminal" [ngSwitch]="selection.value">
       <pre *ngSwitchDefault>ng generate component xyz</pre>
       <pre *ngSwitchCase="'material'">ng add @angular/material</pre>
       <pre *ngSwitchCase="'pwa'">ng add @angular/pwa</pre>
@@ -8,5 +47,7 @@
       <pre *ngSwitchCase="'test'">ng test</pre>
       <pre *ngSwitchCase="'build'">ng build</pre>
   </div>
+
+</div>
 
 <router-outlet></router-outlet>
