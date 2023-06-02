@@ -3,6 +3,13 @@
 <div class="content" role="main">
   <span>{{ title }} app is running!</span>
 
+
+  selection = {{ selection.value }}
+
+  <div *ngIf="selection.value == 'component' || !selection.value">
+    l'option par défaut est sélectionnée
+  </div>
+
   <input type="hidden" #selection>
   
   <!-- 
