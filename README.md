@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
 
+
+#TODO
+
+Add routing to the application https://angular.io/tutorial/first-app/first-app-lesson-10#step-2---add-routing-to-the-application
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
