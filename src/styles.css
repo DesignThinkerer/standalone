@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    /* colors */
+    --app-background: white;
+    --app-foreground: black;
+    --app-header-background: var(--app-foreground);
+    --app-header-foreground: var(--app-background);
+    --app-footer-background: var(--app-foreground);
+    --app-footer-foreground: var(--app-background);
+    --app-nav-background: var(--app-foreground);
+    --app-nav-foreground: var(--app-background);
+}
+
+/* Layout */
+
+app-root {
+    background-color: var(--app-background);
+    color: var(--app-foreground);
+    height: 100dvh; /* 100% of the __current__ viewport height --> dynamic, change when scrolling on mobile */
+    width: 100dvw; /* 100% of the __current__ viewport width --> dynamic, change when scrolling on mobile */
+    
+    /* More info on the new css viewport units:
+
+    https://www.terluinwebdesign.nl/en/css/incoming-20-new-css-viewport-units-svh-lvh-dvh-svw-lvw-dvw/
+    https://www.w3.org/TR/css-values-4/#dynamic-viewport-size
+    https://www.w3.org/TR/css-writing-modes-4/#inline-axis
+    https://www.w3.org/TR/virtual-keyboard/
+    https://webkit.org/blog/12288/working-together-on-interop-2022/
+    https://web.dev/interop-2022/
+    https://github.com/w3c/csswg-drafts/issues/1766
+    
+    */
+
+    display: grid;
+    grid-template-areas:
+        "nav header"
+        "nav main"
+        "nav footer";
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: max-content 1fr;
+}
+
+body{
+    margin:0;
+}
+
+header {
+    background-color: var(--app-header-background);
+    color: var(--app-header-foreground);
+    grid-area: header;
+}
+
+nav {
+    background-color: var(--app-nav-background);
+    color: var(--app-nav-foreground);
+    grid-area: nav;
+}
+
+main {
+    color: var(--app-foreground);
+    background-color: var(--app-background);
+    grid-area: main;
+    overflow: scroll;
+    display: flex column;
+    align-items: center;
+}
+
+footer {
+    color: var(--app-footer-foreground);
+    background-color: var(--app-footer-background);
+    grid-area: footer;
+    display: flex;
+    gap: 1ch;
+    list-style: none;
+    justify-content: center;
+    padding: 1ch;
+}

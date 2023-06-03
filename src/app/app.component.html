@@ -1,41 +1,25 @@
-<div class="content" role="main">
-	<header>
-		<!-- ARIA breadcrumb pattern 
-			https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/
-		-->
-		<nav aria-label="Breadcrumb" class="breadcrumb">
-			<ol>
-				<li>
-					<a href="../../../.."> WAI-ARIA Authoring Practices Guide (APG) </a>
-				</li>
-				<li>
-					<a href="../../../"> Patterns </a>
-				</li>
-				<li>
-					<a href="../../"> Breadcrumb Pattern </a>
-				</li>
-				<li>
-					<a href="" aria-current="page"> Breadcrumb Example </a>
-				</li>
-			</ol>
-		</nav>
-		<h1>{{ title }}</h1>
-	</header>
 
-	<nav role="main-nav">
-		<li>Accueil</li>
-		<li>Profil</li>
-		<li>Carnet</li>
-		<li>Courses</li>
-		<li>Planificateur</li>
-		<li>Réserves</li>
-		<li>Astuces</li>
-		<li>Utilitaires</li>
-		<li>Trophées</li>
-		<li>Paramètres</li>
-		<li>Partenaires</li>
-		<li>A propos</li>
-	</nav>
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
 
-	<router-outlet></router-outlet>
-</div>
+  <nav role="main-nav">
+    <li>Home</li>
+    <li>User</li>
+    <li>Recipes</li>
+    <li>Shopping</li>
+    <li>Planner</li>
+    <li>Pantry</li>
+    <li>Tips</li>
+    <li>Tools</li>
+    <li>Trophy</li>
+    <li>Settings</li>
+    <li>Partners</li>
+    <li>About</li>
+  </nav>
+
+  <main><app-home></app-home></main>
+
+  <footer>
+    Some useful links here
+  </footer>
