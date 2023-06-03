@@ -1,31 +1,29 @@
-.listing {
+.recipe {
     background: var(--accent-color);
     border-radius: 30px;
     padding-bottom: 30px;
-  }
-  .listing-heading {
+    display: flex;
+    }
+  .recipe-name {
     color: var(--primary-color);
-    padding: 10px 20px 0 20px;
+    font-size: 1.5rem;
   }
-  .listing-photo {
+  .recipe-photo {
     height: 250px;
     width: 100%;
     object-fit: cover;
     border-radius: 30px 30px 0 0;
   }
-  .listing-location {
+  .recipe-ingredients {
     padding: 10px 20px 20px 20px;
   }
-  .listing-location::before {
-    content: url("/assets/location-pin.svg") / "";
-  }
   
-  section.listing a {
+  section.recipe a {
     padding-left: 20px;
     text-decoration: none;
     color: var(--primary-color);
   }
-  section.listing a::after {
+  section.recipe a::after {
     content: "\203A";
     margin-left: 5px;
   }

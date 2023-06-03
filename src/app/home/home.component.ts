@@ -14,6 +14,7 @@ import { Recipe } from "../models/recipe";
 export class HomeComponent {
   recipe: Recipe = {
     name: "Gauffres",
+    photo: "https://cdn.stocksnap.io/img-thumbs/960w/P3NGIKBIFL.jpg",
     ingredients: ["Oeufs", "farine", "lait", "sucre", "beurre", "sel", "levure"],
     instructions: "Mélanger les ingrédients, laisser reposer, cuire au gaufrier",
     cookingTime: 11,
