@@ -1,7 +1,9 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core"; //import inject function in the home component class
 import { CommonModule } from "@angular/common";
 import { RecipeComponent } from "../recipe/recipe.component";
 import { Recipe } from "../models/recipe";
+
+import { RecipeService } from "../services/recipe.service";
 
 @Component({
   selector: "app-home",
@@ -12,24 +14,12 @@ import { Recipe } from "../models/recipe";
 })
 
 export class HomeComponent {
-  recipeList: Recipe[] = [
-    {
-      name: "Gauffres",
-      photo: "https://cdn.stocksnap.io/img-thumbs/960w/P3NGIKBIFL.jpg",
-      ingredients: ["Oeufs", "farine", "lait", "sucre", "beurre", "sel", "levure"],
-      instructions: "Mélanger les ingrédients, laisser reposer, cuire au gaufrier",
-      cookingTime: 11,
-      difficulty: 'medium'
-    },
-    {
-      name: "pasta salad olives",
-      photo: "https://cdn.stocksnap.io/img-thumbs/960w/pasta%20salad-olives_UWBB1NOLMD.jpg",
-      ingredients: ["pasta", "olives", "tomatoes", "basil", "olive oil", "salt", "pepper"],
-      instructions: "Cook the pasta, cut the tomatoes and olives, mix everything together",
-      cookingTime: 0,
-      difficulty: 'easy'
-    }
-  ];
+  recipeList: Recipe[] = [];
+  recipeService: RecipeService = inject(RecipeService); //inject the RecipeService in the home component class
+
+  constructor() {
+    this.recipeList = this.recipeService.getAllRecipe(); //get the recipe list from the RecipeService
+  }
 }
 
 /*
