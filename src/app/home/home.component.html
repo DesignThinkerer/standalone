@@ -5,6 +5,13 @@
     </form>
 </section>
 <section class="results">
-<app-recipe [recipe]="recipe"></app-recipe>
-<!-- Property binding syntax to notify Angular that the assigned value is a property from the component class and not a string value. "recipe" is the name of a property from the RecipeComponent. -->
+<app-recipe *ngFor="let recipe of recipeList" [recipe]="recipe"></app-recipe>
+<!-- 
+  This code generates multiple instances of the <app-recipe> component based on the recipeList array. Each instance represents a single recipe item and receives the corresponding recipe data through the [recipe] attribute binding.  
+    
+  *ngFor="let recipe of recipeList": This is an Angular structural directive called ngFor. It is used to loop over a collection of items and generate HTML markup for each item. In this case, it iterates over the recipeList array and assigns each item to the variable recipe.
+
+  [recipe]="recipe": This is an attribute binding syntax in Angular. It binds the current recipe item from the ngFor loop to the recipe property of the <app-recipe> component. This allows the <app-recipe> component to receive and display the specific recipe data.
+  
+  -->
 </section>
