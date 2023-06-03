@@ -20,18 +20,18 @@
 
   <!-- todo: replace the sidenav with an ionic component -->
 <nav>
-  <li><a href="">Home</a></li>
-  <li><a href="">User</a></li>
-  <li><a href="">Recipes</a></li>
-  <li><a href="">Shopping</a></li>
-  <li><a href="">Planner</a></li>
-  <li><a href="">Pantry</a></li>
-  <li><a href="">Tips</a></li>
-  <li><a href="">Tools</a></li>
-  <li><a href="">Trophy</a></li>
-  <li><a href="">Settings</a></li>
-  <li><a href="">Partners</a></li>
-  <li><a href="">About</a></li>
+  <li><a [routerLink]="['/home']">Home</a></li> 
+  <li><a [routerLink]="['/user']">User</a></li>
+  <li><a [routerLink]="['/recipes']">Recipes</a></li>
+  <li><a [routerLink]="['/shopping']">Shopping</a></li>
+  <li><a [routerLink]="['/planner']">Planner</a></li>
+  <li><a [routerLink]="['/pantry']">Pantry</a></li>
+  <li><a [routerLink]="['/tips']">Tips</a></li>
+  <li><a [routerLink]="['/tools']">Tools</a></li>
+  <li><a [routerLink]="['/trophy']">Trophy</a></li>
+  <li><a [routerLink]="['/settings']">Settings</a></li>
+  <li><a [routerLink]="['/partners']">Partners</a></li>
+  <li><a [routerLink]="['/about']">About</a></li>
 </nav>
 
 <main><app-home></app-home></main>
