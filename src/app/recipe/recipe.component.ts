@@ -9,6 +9,7 @@ import { Recipe } from '../models/recipe';
   templateUrl: './recipe.component.html',
   styleUrls: ['./recipe.component.css']
 })
-export class RecipeComponent {
 
+export class RecipeComponent {
+  @Input() recipe!: RecipeComponent;
 }
