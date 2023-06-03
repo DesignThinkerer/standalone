@@ -12,7 +12,7 @@
 
 /* Layout */
 
-app-root {
+body {
     background-color: var(--app-background);
     color: var(--app-foreground);
     height: 100dvh; /* 100% of the __current__ viewport height --> dynamic, change when scrolling on mobile */
@@ -37,40 +37,5 @@ app-root {
         "nav footer";
     grid-template-columns: max-content 1fr;
     grid-template-rows: max-content 1fr;
-}
-
-body{
     margin:0;
-}
-
-header {
-    background-color: var(--app-header-background);
-    color: var(--app-header-foreground);
-    grid-area: header;
-}
-
-nav {
-    background-color: var(--app-nav-background);
-    color: var(--app-nav-foreground);
-    grid-area: nav;
-}
-
-main {
-    color: var(--app-foreground);
-    background-color: var(--app-background);
-    grid-area: main;
-    overflow: scroll;
-    display: flex column;
-    align-items: center;
-}
-
-footer {
-    color: var(--app-footer-foreground);
-    background-color: var(--app-footer-background);
-    grid-area: footer;
-    display: flex;
-    gap: 1ch;
-    list-style: none;
-    justify-content: center;
-    padding: 1ch;
 }

@@ -1,25 +1,39 @@
+<header>
+  <!-- Accessibility: 
+    "The banner landmark is used to identify the header of a webpage, which typically contains the website's logo, navigation, and > > search input. When the <header> element is not used as a child of the <main> element or another sectioning element, it is assigned > the banner role." - https://developer.mozilla.org/en-US/blog/aria-accessibility-html-landmark-roles/#the_banner_landmark
 
-  <header>
-    <h1>{{ title }}</h1>
-  </header>
+    Thus I will use body as a selector instead of app-component. If this cause issue, I will revert the change and explicitly set the aria role of the header.
+  
+  -->
+  <!--
+    Use <button> for toggling the nav, not <a>. Using URL fragments to toggle UI undermine the standard navigation mechanism and the user's intention:
 
-  <nav role="main-nav">
-    <li>Home</li>
-    <li>User</li>
-    <li>Recipes</li>
-    <li>Shopping</li>
-    <li>Planner</li>
-    <li>Pantry</li>
-    <li>Tips</li>
-    <li>Tools</li>
-    <li>Trophy</li>
-    <li>Settings</li>
-    <li>Partners</li>
-    <li>About</li>
-  </nav>
+    * The user navigate to a page using the sidebar
+    * If the user then opens the menu, the initial intention is lost because the URL fragment changes
+    * If the link is shared/bookmarked, this will open navigation by default, which can be confusing.
 
-  <main><app-home></app-home></main>
+    See also: https://www.a11yproject.com/posts/creating-valid-and-accessible-links/#when-should-you-use-a-button-instead%3F
+  -->
+  <button>toggle the nav</button>
+  <h1>{{ title }}</h1>
+</header>
 
-  <footer>
-    Some useful links here
-  </footer>
+  <!-- todo: replace the sidenav with an ionic component -->
+<nav>
+  <li><a href="">Home</a></li>
+  <li><a href="">User</a></li>
+  <li><a href="">Recipes</a></li>
+  <li><a href="">Shopping</a></li>
+  <li><a href="">Planner</a></li>
+  <li><a href="">Pantry</a></li>
+  <li><a href="">Tips</a></li>
+  <li><a href="">Tools</a></li>
+  <li><a href="">Trophy</a></li>
+  <li><a href="">Settings</a></li>
+  <li><a href="">Partners</a></li>
+  <li><a href="">About</a></li>
+</nav>
+
+<main><app-home></app-home></main>
+
+<footer>Some useful links here</footer>

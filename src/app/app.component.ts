@@ -4,7 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'body', // changed from 'app-root' to benefit from the implicit aria roles of the HTML5 semantic elements
   standalone: true,
   imports: [CommonModule, RouterOutlet, HomeComponent],
   templateUrl: './app.component.html',
