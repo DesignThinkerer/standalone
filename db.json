@@ -1,0 +1,22 @@
+{
+    "recipes": [
+    {
+        "id": 1,
+        "name": "Gauffres",
+        "photo": "https://cdn.stocksnap.io/img-thumbs/960w/P3NGIKBIFL.jpg",
+        "ingredients": ["Oeufs", "farine", "lait", "sucre", "beurre", "sel", "levure"],
+        "instructions": "Mélanger les ingrédients, laisser reposer, cuire au gaufrier",
+        "cookingTime": 11,
+        "difficulty": "medium"
+    },
+    {
+        "id": 2,
+        "name": "pasta salad olives",
+        "photo": "https://cdn.stocksnap.io/img-thumbs/960w/pasta%20salad-olives_UWBB1NOLMD.jpg",
+        "ingredients":  ["pasta", "olives", "tomatoes", "basil", "olive oil", "salt", "pepper"],
+        "instructions": "Cook the pasta, cut the tomatoes and olives, mix everything together",
+        "cookingTime":  0,
+        "difficulty": "easy"
+      }
+    ]
+    }
