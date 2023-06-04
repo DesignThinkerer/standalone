@@ -21,17 +21,3 @@ export class HomeComponent {
     this.recipeList = this.recipeService.getAllRecipe(); //get the recipe list from the RecipeService
   }
 }
-
-/*
-TODO: 
-
-* recipe list https://angular.io/tutorial/toh-pt2
-* recipe service https://angular.io/tutorial/toh-pt4
-* detail view https://angular.io/tutorial/toh-pt5
-* creation view https://angular.io/tutorial/toh-pt6
-* recipe model https://angular.io/tutorial/toh-pt6#add-the-herodata-model
-* recipe routing https://angular.io/tutorial/toh-pt5#add-the-approutingmodule
-* recipe guard https://angular.io/tutorial/toh-pt5#add-the-canactivate-route-guard
-* recipe resolver https://angular.io/tutorial/toh-pt6#add-a-resolver
-
-*/
