@@ -12,4 +12,17 @@ This ensure that if the value is null or undefined, the expression will stop and
         {{ recipe?.instructions }}
       </p>
     </section>
+
+    <!--
+      (submit)="submitRecipeNotes()" is an event handler. Angular uses parentheses syntax around the event name to create define events in the template code. The code on the right hand side of the equals sign is the code that should be executed when this event is triggered.browser events and custom events can be bound.
+    -->
+    <form [formGroup]="recipeNotesForm" (submit)="submitRecipeNotes()">
+      <label for="comment">comment</label>
+      <input id="comment" type="text" formControlName="comment">
+
+      <label for="rating">rating</label>
+      <input id="rating" type="text" formControlName="rating">
+
+      <button type="submit" class="primary">send notes</button>
+    </form>
   </article>

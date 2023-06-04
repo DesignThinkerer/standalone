@@ -35,7 +35,7 @@ export class RecipeService {
 
   //receives the form data to send to the data's destination, here the browser console log
   submitRecipeNotes(comment: string, rating: string) {
-    console.log(`Comment about that recipe: $(comment)$, rated $(rating)$/10`);
+    console.log(`Comment about that recipe: ${comment}, rated ${rating}/10`);
   }
 
   //These functions allow dependencies to access the service's data.
