@@ -29,10 +29,11 @@ export class DetailsComponent {
     rating: new FormControl('')
   })
 
-  constructor(){
-    const recipeName = this.route.snapshot.params['name'];
-    //call to the recipeService to pass the route parameter as an argument to the getRecipeByName service function
-    this.recipe = this.recipeService.getRecipeByName(recipeName);
+  constructor() {
+    const recipeId = parseInt(this.route.snapshot.params['id'], 10);
+    this.recipeService.getRecipeById(recipeId).then(recipe => {
+      this.recipe = recipe;
+    });
   }
 
   //handle the apply now click
