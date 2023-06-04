@@ -1,4 +1,4 @@
-name: Build and test
+name: Deploy to GitHub Pages via angular-cli-ghpages
 
 on:
   push:
@@ -13,23 +13,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-
-      - name: Prepare
-        run: |
-          cd src
-          npm install
-          npm run build
-          cd dist
-          npm link
-          cd ..
-          cd ..
-          npm link angular-cli-ghpages
-          ng add angular-cli-ghpages
-
-      - name: Deploy
+          
+      - name: Prepare and deploy
         if: github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          cd standalone
-          ng deploy --no-silent --name="TheophileDesmedt" --email="theophiledesmedt-buildbot@gmail.com"
+          npm install
+          ng deploy --base-href=/standalone/ --name="TheophileDesmedt" --email="theophiledesmedt-buildbot@gmail.com"
