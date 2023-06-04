@@ -12,5 +12,10 @@ import { Recipe } from '../models/recipe';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent {
-
+  route: ActivatedRoute = inject(ActivatedRoute);
+  recipeName: string = 'blank'; //default value
+  constructor(){
+    this.recipeName = this.route.snapshot.params['name'];
+    //To convert a route parameter to a number: Number(this.route.snapshot.params['id']);
+  }
 }
