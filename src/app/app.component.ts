@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 /*
-* routermodule is a module that provides the router service providers and directives needed for routing
-* routeroutlet is included in the routermodule
+* RouterModule is a module that provides the router service providers and directives needed for routing
+* RouterOutlet is included in the RouterModule
 */
 import { HomeComponent } from './home/home.component';
 
