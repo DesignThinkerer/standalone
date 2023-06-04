@@ -17,7 +17,8 @@ export class DetailsComponent {
   recipe: Recipe | undefined;
 
   constructor(){
-    const recipeName = this.route.snapshot.params['name']; 
+    const recipeName = this.route.snapshot.params['name'];
+    //call to the recipeService to pass the route parameter as an argument to the getRecipeByName service function
     this.recipe = this.recipeService.getRecipeByName(recipeName);
   }
 }
