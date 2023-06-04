@@ -103,7 +103,12 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/standalone/",
+            "name": "deploy-bot",
+            "email": "deploy-bot@angular"
+          }
         }
       }
     }
