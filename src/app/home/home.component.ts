@@ -15,6 +15,8 @@ import { RecipeService } from "../services/recipe.service";
 
 export class HomeComponent {
   recipeList: Recipe[] = [];
+  filteredRecipeList: Recipe[] = []; //store data in a array property that will be used for filtering.
+
   recipeService: RecipeService = inject(RecipeService); //inject the RecipeService in the home component class
 
   constructor() {
