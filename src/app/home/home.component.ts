@@ -37,10 +37,9 @@ export class HomeComponent {
 
 
   constructor() {
-    this.recipeList = this.recipeService.getAllRecipe();
-
-    //filteredRecipeList should contain the total set of recipes by default when the page loads.
-
-    this.filteredRecipeList = this.recipeList;
+    this.recipeService.getAllRecipe().then((recipeList: Recipe[]) => {
+      this.recipeList = recipeList;
+      this.filteredRecipeList = recipeList;
+    });
   }
 }
