@@ -8,6 +8,7 @@ import { Recipe } from '../models/recipe';
 export class RecipeService {
   recipeList: Recipe[] = [
     {
+      id: 1,
       name: "Gauffres",
       photo: "https://cdn.stocksnap.io/img-thumbs/960w/P3NGIKBIFL.jpg",
       ingredients: ["Oeufs", "farine", "lait", "sucre", "beurre", "sel", "levure"],
@@ -16,6 +17,7 @@ export class RecipeService {
       difficulty: 'medium'
     },
     {
+      id: 2,
       name: "pasta salad olives",
       photo: "https://cdn.stocksnap.io/img-thumbs/960w/pasta%20salad-olives_UWBB1NOLMD.jpg",
       ingredients: ["pasta", "olives", "tomatoes", "basil", "olive oil", "salt", "pepper"],
