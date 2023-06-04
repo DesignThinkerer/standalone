@@ -13,9 +13,11 @@ import { Recipe } from '../models/recipe';
 })
 export class DetailsComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
-  recipeName: string = 'blank'; //default value
+  recipeService: RecipeService = inject(RecipeService);
+  recipe: Recipe | undefined;
+
   constructor(){
-    this.recipeName = this.route.snapshot.params['name'];
-    //To convert a route parameter to a number: Number(this.route.snapshot.params['id']);
+    const recipeName = this.route.snapshot.params['name']; 
+    this.recipe = this.recipeService.getRecipeByName(recipeName);
   }
 }

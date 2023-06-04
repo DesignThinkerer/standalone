@@ -1,1 +1,15 @@
-<p>This is the name of the recipe: {{ recipeName }}</p>
+<!-- Accessing the data with a call to the RecipeService
+Note: the properties are accessed with the optionnal chaining operator "?"
+This ensure that if the value is null or undefined, the expression will stop and the value will be displayed as empty instead of crashing the app.
+-->
+
+<article>
+    <img class="recipe-photo" [src]="recipe?.photo"
+      alt="photo of {{recipe?.name}}"/>
+    <section class="recipe-description">
+      <h2 class="recipe-heading">{{ recipe?.name }}</h2>
+      <p>
+        {{ recipe?.instructions }}
+      </p>
+    </section>
+  </article>
