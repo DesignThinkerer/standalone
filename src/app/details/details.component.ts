@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { RecipeService } from '../services/recipe.service';
+import { Recipe } from '../models/recipe';
 
 @Component({
   selector: 'app-details',
