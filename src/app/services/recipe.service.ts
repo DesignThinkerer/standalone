@@ -33,6 +33,10 @@ export class RecipeService {
     return this.recipeList.find(recipe => recipe.name === name);
   }
 
+  submitRecipeNotes(comment: string, rating: number) {
+    console.log(`Comment about that recipe: $(comment)$, rated $(rating)$/10`);
+  }
+
   //These functions allow dependencies to access the service's data.
   //They return either a specific Recipe by name or the entire list.
   constructor() { }
