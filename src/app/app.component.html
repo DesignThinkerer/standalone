@@ -14,26 +14,30 @@
 
     See also: https://www.a11yproject.com/posts/creating-valid-and-accessible-links/#when-should-you-use-a-button-instead%3F
   -->
-  <button>toggle the nav</button>
   <h1>{{ title }}</h1>
 </header>
 
   <!-- todo: replace the sidenav with an ionic component -->
 <nav>
-  <li><a href="/home">Home</a></li>
-  <li><a href="/user">User</a></li>
-  <li><a href="/recipes">Recipes</a></li>
-  <li><a href="/shopping">Shopping</a></li>
-  <li><a href="/planner">Planner</a></li>
-  <li><a href="/pantry">Pantry</a></li>
-  <li><a href="/tips">Tips</a></li>
-  <li><a href="/tools">Tools</a></li>
-  <li><a href="/trophy">Trophy</a></li>
-  <li><a href="/settings">Settings</a></li>
-  <li><a href="/partners">Partners</a></li>
-  <li><a href="/about">About</a></li>
+  <li><a [routerLink]="'/home'">Home</a></li>
+  <li><a [routerLink]="'/user'">User</a></li>
+  <li><a [routerLink]="'/recipes'">Recipes</a></li>
+  <li><a [routerLink]="'/shopping'">Shopping</a></li>
+  <li><a [routerLink]="'/planner'">Planner</a></li>
+  <li><a [routerLink]="'/pantry'">Pantry</a></li>
+  <li><a [routerLink]="'/tips'">Tips</a></li>
+  <li><a [routerLink]="'/tools'">Tools</a></li>
+  <li><a [routerLink]="'/trophy'">Trophy</a></li>
+  <li><a [routerLink]="'/settings'">Settings</a></li>
+  <li><a [routerLink]="'/partners'">Partners</a></li>
+  <li><a [routerLink]="'/about'">About</a></li>
 </nav>
 
-<main><app-home></app-home></main>
+<main>
+  <router-outlet><!-- 
+    this is where the router will render the component
+    to make the route work we need to add them to the routing configuration file
+  --></router-outlet> 
+</main>
 
 <footer>Some useful links here</footer>
