@@ -9,7 +9,10 @@ import { DetailsComponent } from './details/details.component';
 	  title: 'Home page'
 	},
 	{
-		path: 'details/:name',// see the interface for a recipe: src\app\models\recipe.ts
+		path: 'details/:name',
+		//:name identifies the route parameter
+		//here :name is dynamic and will change based on how the route is requested by the code.
+		// see the interface for a recipe: src\app\models\recipe.ts
 		component: DetailsComponent,
 		title: 'Recipe details'
 	}
