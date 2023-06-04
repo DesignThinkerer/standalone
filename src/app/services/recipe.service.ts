@@ -6,33 +6,18 @@ import { Recipe } from '../models/recipe';
   providedIn: 'root'
 })
 export class RecipeService {
-  recipeList: Recipe[] = [
-    {
-      id: 1,
-      name: "Gauffres",
-      photo: "https://cdn.stocksnap.io/img-thumbs/960w/P3NGIKBIFL.jpg",
-      ingredients: ["Oeufs", "farine", "lait", "sucre", "beurre", "sel", "levure"],
-      instructions: "Mélanger les ingrédients, laisser reposer, cuire au gaufrier",
-      cookingTime: 11,
-      difficulty: 'medium'
-    },
-    {
-      id: 2,
-      name: "pasta salad olives",
-      photo: "https://cdn.stocksnap.io/img-thumbs/960w/pasta%20salad-olives_UWBB1NOLMD.jpg",
-      ingredients: ["pasta", "olives", "tomatoes", "basil", "olive oil", "salt", "pepper"],
-      instructions: "Cook the pasta, cut the tomatoes and olives, mix everything together",
-      cookingTime: 0,
-      difficulty: 'easy'
-    }
-  ];
+  url: string = 'http://localhost:3000/recipes';
 
-  getAllRecipe(): Recipe[] {
-    return this.recipeList;
+  //asynchronous code that send a get request over HTTP.
+  async getAllRecipe(): Promise<Recipe[]> {
+    const data = await fetch(this.url);
+    //see also HttpClient for more advanced use cases
+    return await data.json() ?? [];
   }
   
-  getRecipeByName(name: String): Recipe | undefined {
-    return this.recipeList.find(recipe => recipe.name === name);
+  async getRecipeById(id: Number): Promise<Recipe | undefined> {
+    const data = await fetch(`${this.url}/${id}`);
+    return await data.json() ?? {};
   }
 
   //receives the form data to send to the data's destination, here the browser console log
