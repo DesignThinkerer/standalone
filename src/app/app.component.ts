@@ -6,11 +6,12 @@ import { RouterModule } from '@angular/router';
 * RouterOutlet is included in the RouterModule
 */
 import { HomeComponent } from './home/home.component';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'body', // changed from 'app-root' to benefit from the implicit aria roles of the HTML5 semantic elements
   standalone: true,
-  imports: [CommonModule, RouterModule, HomeComponent],
+  imports: [CommonModule, RouterModule, HomeComponent, IonicModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
