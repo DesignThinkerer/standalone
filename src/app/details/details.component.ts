@@ -31,6 +31,7 @@ export class DetailsComponent {
 
   constructor() {
     const recipeId = parseInt(this.route.snapshot.params['id'], 10);
+    
     this.recipeService.getRecipeById(recipeId).then(recipe => {
       this.recipe = recipe;
     });

@@ -37,7 +37,7 @@
     {
       "id": 3,
       "name": "Chocolate Chip Cookies",
-      "photo": "https://cdn.stocksnap.io/img-thumbs/960w/chocolate-chip-cookies_DHD2H88GHE.jpg",
+      "photo": "https://cdn.stocksnap.io/img-thumbs/960w/cookies-chocolate%20chip%20cookies_S4T2FDBYCN.jpg",
       "ingredients": [
         "butter",
         "brown sugar",
@@ -56,7 +56,7 @@
     {
       "id": 4,
       "name": "Chicken Alfredo",
-      "photo": "https://cdn.stocksnap.io/img-thumbs/960w/chicken-alfredo_Q0HZHVPO6N.jpg",
+      "photo": "https://cdn.stocksnap.io/img-thumbs/280h/fried-chicken_VYTEWBJEXM.jpg",
       "ingredients": [
         "chicken breast",
         "fettuccine pasta",
@@ -74,7 +74,7 @@
     {
       "id": 5,
       "name": "Caprese Salad",
-      "photo": "https://cdn.stocksnap.io/img-thumbs/960w/caprese-salad_0B8H3HQ9LK.jpg",
+      "photo": "https://cdn.stocksnap.io/img-thumbs/280h/salad-bowl_PLOA1CWIRK.jpg",
       "ingredients": [
         "tomatoes",
         "mozzarella cheese",
@@ -91,7 +91,7 @@
     {
       "id": 6,
       "name": "Grilled Salmon",
-      "photo": "https://cdn.stocksnap.io/img-thumbs/960w/grilled-salmon_HRDOVXVL2O.jpg",
+      "photo": "https://cdn.stocksnap.io/img-thumbs/280h/grilled-food_FWJC3SUNGR.jpg",
       "ingredients": [
         "salmon fillets",
         "olive oil",
@@ -107,7 +107,7 @@
     {
       "id": 7,
       "name": "Margarita Pizza",
-      "photo": "https://cdn.stocksnap.io/img-thumbs/960w/margarita-pizza_6UR3X7K0AO.jpg",
+      "photo": "https://cdn.stocksnap.io/img-thumbs/280h/pizza-wine_IJESKJTYB6.jpg",
       "ingredients": [
         "pizza dough",
         "tomatoes",
@@ -124,7 +124,7 @@
     {
       "id": 8,
       "name": "Chicken Stir-Fry",
-      "photo": "https://cdn.stocksnap.io/img-thumbs/960w/chicken-stir-fry_1JZTTKJEDQ.jpg",
+      "photo": "https://cdn.stocksnap.io/img-thumbs/280h/food-cook_N0TOKTDNLC.jpg",
       "ingredients": [
         "chicken breast",
         "mixed vegetables",
@@ -142,7 +142,7 @@
     {
       "id": 9,
       "name": "Vegetable Soup",
-      "photo": "https://cdn.stocksnap.io/img-thumbs/960w/vegetable-soup_3Q1W53EN1X.jpg",
+      "photo": "https://cdn.stocksnap.io/img-thumbs/280h/outdoor-dining_KYBT3GW98V.jpg",
       "ingredients": [
         "onion",
         "carrots",
@@ -162,7 +162,7 @@
     {
       "id": 10,
       "name": "Beef Tacos",
-      "photo": "https://cdn.stocksnap.io/img-thumbs/960w/beef-tacos_B3TEUS2KIC.jpg",
+      "photo": "https://cdn.stocksnap.io/img-thumbs/280h/mexican-tacos_UPG7YS3LGW.jpg",
       "ingredients": [
         "ground beef",
         "taco shells",
